@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HotelNewAddressPage {
+public class NewAddressPage {
 
     private final WebDriver driver;
 
@@ -26,7 +26,7 @@ public class HotelNewAddressPage {
     @FindBy(css = "#content > div > div > form > footer > button")
     private WebElement submitBtn;
 
-    public HotelNewAddressPage(WebDriver driver) {
+    public NewAddressPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

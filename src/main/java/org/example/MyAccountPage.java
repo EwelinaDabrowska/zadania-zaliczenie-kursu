@@ -3,23 +3,11 @@ package org.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HotelMyAccountPage {
+public class MyAccountPage {
     private final WebDriver driver;
 
-    public HotelMyAccountPage(WebDriver driver) {
+    public MyAccountPage(WebDriver driver) {
         this.driver = driver;
-    }
-
-    public boolean isSuccessAlertDisplayed() {
-        return driver.findElement(By.className("alert-success")).isDisplayed();
-    }
-
-    public String getSuccessAlert() {
-        return driver.findElement(By.className("alert-success")).getText();
-    }
-
-    public String getUserName() {
-        return driver.findElement(By.className("account_user_name")).getText();
     }
 
     public void goToHomePage() {

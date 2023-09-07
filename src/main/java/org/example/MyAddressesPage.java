@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class HotelMyAddressesPage {
+public class MyAddressesPage {
 
     private final WebDriver driver;
 
@@ -17,13 +17,17 @@ public class HotelMyAddressesPage {
     @FindBy(css = "a[title='Add an address']")
     private WebElement newAddressBtn;
 
-    public HotelMyAddressesPage(WebDriver driver) {
+    public MyAddressesPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
     public void addNewAddress() {
         newAddressBtn.click();
+    }
+
+    public boolean addressIsVisible() {
+        return addresses.size() > 0;
     }
 
 

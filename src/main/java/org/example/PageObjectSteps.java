@@ -8,11 +8,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class HotelPageObjectSteps {
+public class PageObjectSteps {
     private WebDriver driver;
     private MyAddressesPage myAddressesPage;
 
-    @Given("I'm on the hotel authentication page")
+    @Given("I'm on the My Store authentication page")
     public void imOnTheHotelAuthPage() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -28,9 +28,10 @@ public class HotelPageObjectSteps {
 
     @And("I enter new address {string}, {string}, {string}, {string}")
     public void iEnterNewAddress(String address, String postalCode, String city, String phoneNumber) {
-        HotelNewAddressPage newAddressPage = new HotelNewAddressPage(driver);
+        NewAddressPage newAddressPage = new NewAddressPage(driver);
         newAddressPage.enterNewAddressData(address, city, postalCode, phoneNumber);
     }
+
     @And("I close page")
     public void iCloseTheBrowser() {
         driver.quit();

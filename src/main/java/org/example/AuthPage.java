@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HotelAuthPage {
+
+
+public class AuthPage {
     private final WebDriver driver;
 
     @FindBy(name = "email")
@@ -21,7 +23,7 @@ public class HotelAuthPage {
     private WebElement createNewAddressBtn;
 
 
-    public HotelAuthPage(WebDriver driver) {
+    public AuthPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
@@ -37,6 +39,5 @@ public class HotelAuthPage {
         loginBtn.click();
 
         createNewAddressBtn.click();
-
     }
 }
